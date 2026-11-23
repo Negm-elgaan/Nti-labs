@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: Negm-dep
+  name: Negm-dep
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: Negm-dep
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: Negm-dep
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
